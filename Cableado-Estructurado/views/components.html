@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes - Cableado Estructurado</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('../images/background.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-blue-600 p-4 text-white">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="../index.html" class="hover:underline">Inicio</a></li>
+            <li><a href="components.html" class="hover:underline">Componentes</a></li>
+            <li><a href="contact.html" class="hover:underline">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="container mx-auto p-4">
+        <h1 class="text-5xl font-bold mb-4 text-white">Componentes del Cableado Estructurado</h1>
+
+        <h2 class="text-3xl font-bold mb-2 text-white">Cableado</h2>
+        <table class="min-w-full bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+            <thead>
+                <tr class="bg-blue-600 text-white">
+                    <th class="py-2 px-4">Cableado</th>
+                    <th class="py-2 px-4">Tipo de Cable</th>
+                    <th class="py-2 px-4">Longitud Máxima</th>
+                    <th class="py-2 px-4">Ancho de Banda</th>
+                    <th class="py-2 px-4">Conector</th>
+                    <th class="py-2 px-4">Atenuación Máxima</th>
+                    <th class="py-2 px-4">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-2 px-4">Horizontal</td>
+                    <td class="py-2 px-4">UTP Cat 6A, STP Cat 7</td>
+                    <td class="py-2 px-4">90 m</td>
+                    <td class="py-2 px-4">10 Gbps (Cat 6A)</td>
+                    <td class="py-2 px-4">RJ45</td>
+                    <td class="py-2 px-4">32.8 dB/100m @ 500 MHz (Cat 6A)</td>
+                    <td class="py-2 px-4">
+                        <button class="bg-blue-500 text-white py-1 px-3 rounded" onclick="toggleDetails('details1')">Mostrar Detalles</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-2 px-4">Vertical</td>
+                    <td class="py-2 px-4">Fibra OM4, OS2</td>
+                    <td class="py-2 px-4">2000 m (OS2)</td>
+                    <td class="py-2 px-4">100 Gbps (OS2)</td>
+                    <td class="py-2 px-4">LC, MPO</td>
+                    <td class="py-2 px-4">0.4 dB/km @ 1310 nm (OS2)</td>
+                    <td class="py-2 px-4">
+                        <button class="bg-blue-500 text-white py-1 px-3 rounded" onclick="toggleDetails('details2')">Mostrar Detalles</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="details1" class="hidden mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images/table/image1.png">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Cableado Horizontal</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Componentes Principales</h5>
+                            <p>Cable horizontal<br>
+                            Patch panels<br>
+                            Conectores/Jacks<br>
+                            Patch cords<br>
+                            Puntos de consolidación (opcional)</p>
+                        </div>
+                        
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Estándares Aplicables</h5>
+                            <p>ANSI/TIA-568.2-D<br>
+                            ISO/IEC 11801 Class EA<br>
+                            EN 50173-1</p>
+                        </div>
+                    </div>
+                
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Vida Útil Esperada</h5>
+                            <p>15-25 años en condiciones normales de operación</p>
+                        </div>
+                        
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Certificaciones Comunes</h5>
+                            <p>ETL Verified<br>
+                            UL Listed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="details2" class="hidden mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images//table/image1.png" alt="Cableado Vertical" class="w-full mb-2">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Cableado Vertical</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Componentes Principales</h5>
+                            <p>Cable de fibra óptica<br>
+                            Rack de servidores<br>
+                            Conectores de fibra<br>
+                            Paneles de parcheo</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Estándares Aplicables</h5>
+                            <p>ANSI/TIA-568.3-D<br>
+                            ISO/IEC 11801 Class FA<br>
+                            EN 50173-1</p>
+                        </div>
+                    </div>
+        
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Vida Útil Esperada</h5>
+                            <p>25-30 años en condiciones normales de operación</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Certificaciones Comunes</h5>
+                            <p>ETL Verified<br>
+                            UL Listed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-3xl font-bold mb-2 text-white">Ambientes</h2>
+        <table class="min-w-full bg-white rounded-lg shadow-md mb-4 overflow-hidden">
+            <thead>
+                <tr class="bg-blue-600 text-white">
+                    <th class="py-2 px-4">Cuarto</th>
+                    <th class="py-2 px-4">Tamaño Mínimo</th>
+                    <th class="py-2 px-4">Capacidad de Carga del Suelo</th>
+                    <th class="py-2 px-4">Altura Mínima</th>
+                    <th class="py-2 px-4">Temperatura</th>
+                    <th class="py-2 px-4">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-2 px-4">Telecomunicaciones</td>
+                    <td class="py-2 px-4">3m x 3m</td>
+                    <td class="py-2 px-4">≥4.8 kPa</td>
+                    <td class="py-2 px-4">2.6 m</td>
+                    <td class="py-2 px-4">18°C - 24°C</td>
+                    <td class="py-2 px-4">
+                        <button class="bg-blue-500 text-white py-1 px-3 rounded" onclick="toggleDetails('details3')">Mostrar Detalles</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-2 px-4">Equipos</td>
+                    <td class="py-2 px-4">0.07 m²/10 m² área útil</td>
+                    <td class="py-2 px-4">≥12 kPa</td>
+                    <td class="py-2 px-4">3 m</td>
+                    <td class="py-2 px-4">18°C - 24°C</td>
+                    <td class="py-2 px-4">
+                        <button class="bg-blue-500 text-white py-1 px-3 rounded" onclick="toggleDetails('details4')">Mostrar Detalles</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       
+        <div id="details3" class="hidden mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images/table/images4.jpg" alt="Cuarto de Telecomunicaciones" class="w-full mb-2">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Cuarto de Telecomunicaciones</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Componentes Principales</h5>
+                            <p>Panel de distribución<br>
+                            Equipos de telecomunicaciones<br>
+                            Sistema de refrigeración<br>
+                            UPS (Sistemas de Alimentación Ininterrumpida)</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Requisitos de Diseño</h5>
+                            <p>Acceso controlado<br>
+                            Ventilación adecuada<br>
+                            Protección contra incendios</p>
+                        </div>
+                    </div>
+        
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Capacidad de Carga</h5>
+                            <p>≥ 4.8 kPa</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Dimensiones Mínimas</h5>
+                            <p>3m x 3m</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="details4" class="hidden mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images/table/images4.jpg" alt="Cuarto de Equipos" class="w-full mb-2">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Cuarto de Equipos</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Componentes Principales</h5>
+                            <p>Servidores<br>
+                            Equipos de red<br>
+                            Sistemas de almacenamiento<br>
+                            SAI (Sistema de Alimentación Ininterrumpida)</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Requisitos de Diseño</h5>
+                            <p>Acceso controlado<br>
+                            Refrigeración adecuada<br>
+                            Iluminación mínima de 500 lux</p>
+                        </div>
+                    </div>
+        
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Capacidad de Carga</h5>
+                            <p>≥ 12 kPa</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Dimensiones Mínimas</h5>
+                            <p>0.07 m²/10 m² área útil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <h2 class="text-4xl font-bold mb-3 text-white">Elementos Adicionales</h2>
+        <div class="mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images/table/image5.jpg" alt="Puesta a Tierra" class="w-full mb-2">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Puesta a Tierra</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Especificaciones</h5>
+                            <p>Impedancia: ≤ 0.1 Ω<br>
+                            Conductor: Cobre, 6 AWG mín</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Conexiones</h5>
+                            <p>Soldadura exotérmica</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Requisitos Adicionales</h5>
+                            <p>Separación cables energía: 200 mm mín</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Protección Sobretensiones</h5>
+                            <p>10 kA mín</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images/table/image6.jpeg" alt="Entrada de Servicios" class="w-full mb-2">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Entrada de Servicios</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Especificaciones</h5>
+                            <p>Diámetro conducto: 100 mm mín<br>
+                            Protección sobretensiones: 10 kA mín</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Requisitos Adicionales</h5>
+                            <p>Puesta a tierra: ≤ 5 Ω<br>
+                            Separación cables energía: 200 mm mín</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images/table/image7.jpg" alt="Área de Trabajo" class="w-full mb-2">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Área de Trabajo</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Especificaciones</h5>
+                            <p>Tamaño Mínimo: 3m x 3m<br>
+                            Capacidad de Carga del Suelo: ≥ 4.8 kPa</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Requisitos de Diseño</h5>
+                            <p>Superficie no resbaladiza<br>
+                            Iluminación adecuada: 500 lux</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Accesibilidad</h5>
+                            <p>Rutas de evacuación claras<br>
+                            Señalización adecuada</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Protección Contra Incendios</h5>
+                            <p>Extintores disponibles<br>
+                            Sistema de alarma contra incendios</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4 bg-white p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-1">
+                    <img src="../images/table/image8.jpg" alt="Sala de Control" class="w-full mb-2">
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-xl font-bold mb-2">Detalle Sala de Control</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Componentes Principales</h5>
+                            <p>Monitores<br>
+                            Consolas de control<br>
+                            Sistemas de comunicación<br>
+                            Servidores de respaldo</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Requisitos de Diseño</h5>
+                            <p>Acceso controlado<br>
+                            Iluminación adecuada<br>
+                            Aislamiento acústico</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Tamaño Mínimo</h5>
+                            <p>4m x 4m</p>
+                        </div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Capacidad de Carga</h5>
+                            <p>≥ 5.0 kPa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="bg-blue-600 p-4 text-white flex justify-between items-center">
+        <p class="text-center">&copy; 2024 Vlog sobre Cableado Estructurado - Univ. Lopez Bustamante Axel Rolando</p>
+        <div class="flex space-x-4">
+            <audio id="audioPlayer" controls class="text-white">
+                <source src="audios/music.mp3" type="audio/mpeg">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+        </div>
+    </footer>
+    
+
+    <script>
+        function toggleDetails(id) {
+            const detailsDiv = document.getElementById(id);
+            detailsDiv.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
